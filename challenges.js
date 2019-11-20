@@ -374,6 +374,7 @@ Prompt:
 - The function should return the object in the array that has the largest value held in the price property.
 - If there's a tie between two or more objects, return the first of those objects in the array.
 - Return the original object, not a copy.
+- Do not mutate the array being passed in.
 
 Examples:
 
