@@ -195,7 +195,7 @@ describe("16-findHighestPriced", function () {
 
 describe("17-mapArray", function () {
   it("returns a new array", function () {
-    expect(Array.isArray(mapArray([]))).toBe(true);
+    expect(Array.isArray(mapArray([], _ => _))).toBe(true);
   });
   it("successfuly maps without using index", function () {
     expect(mapArray([1, 2, 3], function (n) {
