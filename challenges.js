@@ -87,7 +87,12 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
+function sumNumbers(arr){
+  let sum = 0;
+  for (let i = 0; i<arr.length; i++)
+    sum += arr[i];
+  return sum;
+}
 
 
 
@@ -110,7 +115,12 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function addList(){
+  let sum = 0;
+  for (let i = 0; i<arguments.length; i++)
+    sum += arguments[i];
+  return sum;
+}
 
 
 
@@ -133,7 +143,9 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-
+function computeRemainder(){
+  
+}
 
 
 
