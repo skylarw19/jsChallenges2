@@ -143,8 +143,11 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-function computeRemainder(){
-  
+function computeRemainder(n1, n2){
+  //dividend = num being divided by divisor
+  if (n2 === 0)
+    return Infinity;
+  else return n1 % n2;
 }
 
 
@@ -157,8 +160,10 @@ Difficulty: basic
 
 Prompt:
 
-- Write a function called range that accepts two integers as arguments and returns an array of integers starting with the first argument up to one less than the second argument.
-- The range function must be called with the first argument less than or equal to the second argument, otherwise return the string "First argument must be less than second".
+- Write a function called range that accepts two integers as arguments and returns an array of integers 
+starting with the first argument up to one less than the second argument.
+- The range function must be called with the first argument less than or equal to the second argument, 
+otherwise return the string "First argument must be less than second".
 
 Examples:
 
@@ -169,7 +174,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range(start, finish){
+  if (start>finish)
+    return "First argument must be less than second";
+  else{
+    let arr= [];
+    for (let i = start; i < finish; i++)
+      arr.push(i);
+    return arr;
+  }
+}
 
 
 
