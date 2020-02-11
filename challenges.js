@@ -194,7 +194,8 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse orderand converts all characters to uppercase.
+- Write a function called reverseUpcaseString that accepts a single string argument, t
+hen returns the string with its characters in reverse orderand converts all characters to uppercase.
 
 Examples:
 
@@ -202,6 +203,9 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
+function reverseUpcaseString(str){
+  
+}
 
 
 
@@ -272,7 +276,13 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
+function formatWithPadding(num, pad, len){
+  num = JSON.stringify(num);
+  if (num.length>=len){
+    return num;
+  }
+  return pad.repeat(len-num.length)+num;
+}
 
 
 
