@@ -379,8 +379,21 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs(arr){
+  let pairs = {};
+  for (let i=0; i<arr.length; i++){
+    pairs[arr[i][0]] = arr[i][1];
+  }
+  return pairs;
+}
 
-
+// function newFromPairs(arr){
+//   let pairs ={};
+//   arr.forEach(function(pair)){
+//     pairs[pair[0]] = i[1]; //passes in each element of the array. since we're passing 2d array, it passes in a 1d arr
+//   }
+//  return pairs;
+// }
 
 
 /*-----------------------------------------------------------------
