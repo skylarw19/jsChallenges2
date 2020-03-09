@@ -403,7 +403,8 @@ Difficulty:  Intermediate
 
 Prompt:
 
-- Write a function named mergeObjects that accepts at least two objects as arguments, merges the properties of the second through n objects into the first object, then finally returns the first object.
+- Write a function named mergeObjects that accepts at least two objects as arguments, 
+merges the properties of the second through n objects into the first object, then finally returns the first object.
 - If any objects have the same property key, values from the object(s) later in the arguments list should overwrite earlier values.
 
 Examples:
@@ -521,7 +522,12 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 -----------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
 
-
+function reduceArray(arr, func, acc){
+  for(let i = 0; i <arr.length; i++){
+    acc = func(acc,arr[i],i)
+  }
+  return acc;
+}
 
 
 
