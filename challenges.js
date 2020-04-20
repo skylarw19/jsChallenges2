@@ -640,18 +640,17 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //   return arr.flat(infinity);
 // }
 
-function flatten(arr){
+function flatten(arr) {
   let flatArr = [];
-  arr.forEach(function(a){
-    if (Array.isArray(a)){
-    flatArr = flatArr.concat(flatten(a));
+  arr.forEach(function(a) {
+    if(Array.isArray(a)) {
+      flatArr = flatArr.concat(flatten(a));
     } else {
-      flatArr.push(a)
+      flatArr.push(a);
     }
-  })
-  return flattArr;
+  });
+  return flatArr;
 }
-
 
 
 
