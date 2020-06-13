@@ -88,9 +88,6 @@ function sumNumbers(arr){
   return sum;
 }
 
-
-
-
 /*-----------------------------------------------------------------
 Challenge: 04-addList
 
@@ -109,8 +106,13 @@ add(1,50,1.23) //=> 52.23
 add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
-
-
+function addList(){
+  let sum=0;
+  for (let i=0; i<arguments.length; i++){
+    sum += arguments[i];
+  }
+  return sum;
+}
 
 
 
@@ -133,8 +135,10 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
-
-
+function computeRemainder(n1,n2){
+  if (n2 === 0) return Infinity;
+  else return n1%n2;
+}
 
 
 
