@@ -162,6 +162,19 @@ range(1,1) //=> []
 range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
+function range(n1,n2){
+  if (n1>n2) return "First argument must be less than second"
+  if (n1===n2) return [];
+  else {
+    let arr = [n1];
+    let nextNum = n1;
+    for(let i=1; i<(n2-n1); i++){
+      nextNum+=1;
+      arr[i]=nextNum;
+    } 
+    return arr;
+  } 
+}
 
 
 
