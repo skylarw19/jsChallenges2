@@ -244,6 +244,17 @@ function reverseUpcaseString(str) {
   return results;
 }
 
+// function reverseUpcaseString(string) {
+//   newString = string.split("");
+//     console.log(newString);
+//   reverse = [];
+//   for (let i = newString.length -1; i >= 0; i--) {
+//     reverse.push(newString[i]);
+//   } 
+//   reverseString = reverse.join("");
+//   return reverseString.toUpperCase();
+// }
+
 // function reverseUpcaseString(str) {
 //   // convert string to array, reverse, map and finally join it
 //   return str.split('').reverse().map(function(char) {
