@@ -266,8 +266,6 @@ function charCount(str){
 }
 
 
-
-
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -289,7 +287,16 @@ formatWithPadding(42, '*', 10); //=> "********42"
 formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
-
+function formatWithPadding(n1, char, n2){
+  n1 = n1.toString();
+  if (n2<=n1.length) return n1;
+  let str = "";
+  for (let i=0; i<n2-n1.length; i++){
+    str += char;
+  }
+  str += n1;
+  return str;
+}
 
 
 /*-----------------------------------------------------------------
