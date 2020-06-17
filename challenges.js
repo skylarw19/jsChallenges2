@@ -319,6 +319,14 @@ isPalindrome('A nut for a jar of tuna'); //=> true
 isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
+function isPalindrome(str){
+  if (str.length === 0 || str.length ===1) return true;
+  str = str.toUpperCase().replace(/ /g,"");  //changed to upcase, removed spaces
+  for(let i=0; i<str.length; i++){
+    if (str[i] !== str[str.length-1-i]) return false; //if not same forwards/backwards return false
+  } return true;   //else return true
+}
+
 
 
 
