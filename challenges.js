@@ -387,7 +387,6 @@ function mumble(str){
 }
 
 
-
 /*-----------------------------------------------------------------
 Challenge: 14-fromPairs
 
@@ -406,14 +405,24 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs(arr){
+  let obj = {};
+  for (let i=0; i<arr.length; i++){
+    obj[arr[i][0]]=arr[i][1];
+  } return obj;
+}
 
-// function newFromPairs(arr){
-//   let pairs ={};
-//   arr.forEach(function(pair)){
-//     pairs[pair[0]] = i[1]; //passes in each element of the array. since we're passing 2d array, it passes in a 1d arr
-//   }
-//  return pairs;
+// //using forEach
+// function fromPairs(arr){
+//   let obj = {};
+//   arr.forEach(function(el){
+//     obj[el[0]]=el[1];
+//   });
+//   return obj;
 // }
+
+
+
 
 
 /*-----------------------------------------------------------------
