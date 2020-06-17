@@ -449,6 +449,21 @@ function mergeObjects(){
   }return obj1;
 }
 
+//using spread operator instead of arguemetns
+// function mergeObjects(target, ...objects) {  //where target is first obj
+//   objects.forEach(function(obj) {
+//     for(var key in obj) {
+//       target[key] = obj[key];
+//     }
+//   });
+//   return target;
+// }
+
+// //using Object.assign() method:
+// function mergeObjects(target, ...objects){
+//   return Object.assign(target, ...objects);
+// }
+
 
 
 /*-----------------------------------------------------------------
