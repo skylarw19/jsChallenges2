@@ -321,14 +321,11 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 function isPalindrome(str){
   if (str.length === 0 || str.length ===1) return true;
-  str = str.toUpperCase().replace(/ /g,"");  //changed to upcase, removed spaces
+  str = str.toUpperCase().replace(/ /g,"");  //changed to upcase, removed spaces / /g spaces and global
   for(let i=0; i<str.length; i++){
     if (str[i] !== str[str.length-1-i]) return false; //if not same forwards/backwards return false
   } return true;   //else return true
 }
-
-
-
 
 
 /*-----------------------------------------------------------------
@@ -352,6 +349,13 @@ hammingDistance('!!!!', '****'); //=> 4
 hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+function hammingDistance(str1, str2){
+  if (str1.length !== str2.length) return NaN;
+  let count = 0;
+  for (let i=0; i<str1.length; i++){
+    if (str1[i] !== str2[i]) count++;
+  } return count;
+}
 
 
 
