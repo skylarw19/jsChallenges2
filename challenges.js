@@ -422,9 +422,6 @@ function fromPairs(arr){
 // }
 
 
-
-
-
 /*-----------------------------------------------------------------
 Challenge: 15-mergeObjects
 
@@ -443,6 +440,14 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4});  //=> {a: 1, b: 2, c: 3, d: 4}
 mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
+function mergeObjects(){
+  let obj1 = arguments[0];                        //set obj1 to be first obj in arguments
+  for (let i=0; i<arguments.length; i++){         //go thru all arguments
+    for (const prop in arguments[i]){             //for each property in the object (arguments[i])
+      obj1[prop] = arguments[i][prop];            //obj1 key  = object value
+    }
+  }return obj1;
+}
 
 
 
