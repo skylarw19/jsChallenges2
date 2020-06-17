@@ -494,6 +494,8 @@ function mumble(str) {
   return result;
 }
 
+
+
 /*--- convert to array and use reduce (break that one-liner down!) ---*/
 // function mumble(str) {
 //   return str.split('').reduce((result, c, i) => result + ((i || '') && '-') + c.repeat(i + 1), '');

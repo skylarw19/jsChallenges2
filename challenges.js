@@ -17,7 +17,6 @@ function sayHello() {
   return 'Hello!'
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 01-addOne
 
@@ -114,8 +113,6 @@ function addList(){
   return sum;
 }
 
-
-
 /*-----------------------------------------------------------------
 Challenge: 05-computeRemainder
 
@@ -139,8 +136,6 @@ function computeRemainder(n1,n2){
   if (n2 === 0) return Infinity;
   else return n1%n2;
 }
-
-
 
 /*-----------------------------------------------------------------
 Challenge: 06-range
@@ -235,7 +230,6 @@ function removeEnds(str){
   return result;
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 09-charCount
 
@@ -264,8 +258,6 @@ function charCount(str){
   }
   return obj;
 }
-
-
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -298,7 +290,6 @@ function formatWithPadding(n1, char, n2){
   return str;
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -326,7 +317,6 @@ function isPalindrome(str){
     if (str[i] !== str[str.length-1-i]) return false; //if not same forwards/backwards return false
   } return true;   //else return true
 }
-
 
 /*-----------------------------------------------------------------
 Challenge: 12-hammingDistance
@@ -357,10 +347,6 @@ function hammingDistance(str1, str2){
   } return count;
 }
 
-
-
-
-
 /*-----------------------------------------------------------------
 Challenge: 13-mumble
 
@@ -380,7 +366,25 @@ mumble('121'); //=> '1-22-111'
 mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+// function mumble(str){
+//   let newStr = '';
+//   for (let i=0; i<str.length; i++){
+//     for (let j=-1; j<i; j++){
+//       newStr += str[i];
+//     } 
+//     if (i !== str.length-1) newStr += '-'; //don't want to add '-' at the very end
+//   } return newStr;
+// }
 
+//could also use str.repeat()method:
+
+function mumble(str){
+  let newStr= '';
+  for (let i=0; i<str.length; i++){
+    newStr += str[i].repeat(i+1)
+    if (i !== str.length-1) newStr += '-';
+  } return newStr;
+}
 
 
 
