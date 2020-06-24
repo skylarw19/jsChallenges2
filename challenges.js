@@ -683,6 +683,11 @@ function flatten(arr){
   return newArr;
 }
 
+// //using reduce and arrow func
+// function flatten(arr){
+//   return arr.reduce((newArr, el) => newArr.concat( Array.isArray(el) ? flatten(el) : el), [])
+// }
+
 
 
 
