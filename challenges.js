@@ -561,6 +561,15 @@ function mapArray(arr, cb){
   return newArr;
 }
 
+//or using foreach:
+// function mapArray(arr,cb){
+//   let newArr = [];
+//   arr.forEach(function(el, i){
+//     newArr.push(cb(el,i))
+//   });
+//   return newArr;
+// }
+
 
 
 /*-----------------------------------------------------------------
