@@ -651,9 +651,6 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
 -----------------------------------------------------------------*/
 // Your solution for 19-flatten here:
-// function flatten(arr){
-//   return arr.flat(infinity);
-// }
 
 // function flatten(arr){
 //   let newArr = [];
@@ -667,15 +664,26 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 // }
 
 // using forEach:
+// function flatten(arr){
+//   let newArr = [];
+//   arr.forEach(function(el){
+//     if(Array.isArray(el)){
+//       newArr = newArr.concat(flatten(el));
+//     } else newArr.push(el);
+//   });
+//   return newArr;
+// }
+
+//using inline ternary:
 function flatten(arr){
   let newArr = [];
   arr.forEach(function(el){
-    if(Array.isArray(el)){
-      newArr = newArr.concat(flatten(el));
-    } else newArr.push(el);
+    newArr = newArr.concat( Array.isArray(el) ? flatten(el) : el)
   });
   return newArr;
 }
+
+
 
 
 
