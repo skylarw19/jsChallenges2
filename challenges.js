@@ -708,6 +708,15 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------*/
 // Your solution for 20-isPrime here:
+function isPrime(n){
+  if (n<=1 || !Number.isInteger(n)) return false;
+  let arr = [2,3,5,7];
+  for(let i=0; i<arr.length; i++){
+    if ( n/2>=arr[i] && n%arr[i] === 0) return false;
+  } return true;
+}
+
+
 
 
 
