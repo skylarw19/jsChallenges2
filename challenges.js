@@ -616,6 +616,13 @@ function reduceArray(arr, cb, acc){
   return acc;
 }
 
+//using forEach:
+// function reduceArray(arr, cb, acc){
+//   arr.forEach(function(el, i){
+//     acc = cb(acc, el, i)
+//   });
+//   return acc;
+// }
 
 
 /*-----------------------------------------------------------------
