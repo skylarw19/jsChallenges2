@@ -655,6 +655,28 @@ flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 //   return arr.flat(infinity);
 // }
 
+// function flatten(arr){
+//   let newArr = [];
+//   for (let i=0; i<arr.length; i++){
+//     if (Array.isArray(arr[i])){                      //check if current element is array
+//       newArr = newArr.concat(flatten(arr[i]));       //if it is an array, then newarr = current el array added on. recursive to continue.
+//     }
+//     else newArr.push(arr[i]);                        //if not array, just push.
+//   }
+//   return newArr;
+// }
+
+// using forEach:
+function flatten(arr){
+  let newArr = [];
+  arr.forEach(function(el){
+    if(Array.isArray(el)){
+      newArr = newArr.concat(flatten(el));
+    } else newArr.push(el);
+  });
+  return newArr;
+}
+
 
 
 /*-----------------------------------------------------------------
