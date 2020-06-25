@@ -749,7 +749,13 @@ primeFactors(105) //=> [3, 5, 7]
 primeFactors(200) //=> [2, 2, 2, 5, 5]
 -----------------------------------------------------------------*/
 // Your solution for 21-primeFactors here:
+// function primeFactors(n){
+//   if (n<=1 || !Number.isInteger(n)) return [];
+//   let arr = [];
+//   for (let i=2; i<=n/2; i++){
 
+//   }
+// }
 
 
 
@@ -773,6 +779,21 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------*/
 // Your solution for 22-intersection here:
+function intersection(a1,a2){
+  let arr =[];
+  for(let i=0; i<a1.length; i++){
+    for(let j=0; j<a2.length; j++){
+      if( a2[j] === a1[i]) {
+        arr.push(a2[j]);
+        
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]));
+console.log(intersection([true, 1, 'b', 1], [1, 'a', true, 1, 1]));
 
 
 
