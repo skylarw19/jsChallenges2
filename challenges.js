@@ -779,24 +779,30 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------*/
 // Your solution for 22-intersection here:
+// function intersection(a1,a2){
+//   let arr = [];
+//   let a1cpy = [...a1];  //so we don't change original arguments
+//   for (let i=0; i<a2.length; i++){
+//     if( a1cpy.includes(a2[i]) ){
+//       arr.push(a2[i]);
+//       a1cpy.splice(a1cpy.indexOf(a2[i]),1);
+//     }
+//   }
+//   return arr;
+// }
+
+///using forEach:
 function intersection(a1,a2){
-  let arr =[];
-  for(let i=0; i<a1.length; i++){
-    for(let j=0; j<a2.length; j++){
-      if( a2[j] === a1[i]) {
-        arr.push(a2[j]);
-        
-      }
+  let arr = [];
+  let a1cpy = [...a1];
+  a2.forEach(function(el){
+    if(a1cpy.includes(el)){
+      arr.push(el);
+      a1cpy.splice(a1cpy.indexOf(el),1)
     }
-  }
+  });
   return arr;
 }
-
-console.log(intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]));
-console.log(intersection([true, 1, 'b', 1], [1, 'a', true, 1, 1]));
-
-
-
 
 
 /*-----------------------------------------------------------------
