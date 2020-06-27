@@ -753,9 +753,14 @@ primeFactors(200) //=> [2, 2, 2, 5, 5]
 //   if (n<=1 || !Number.isInteger(n)) return [];
 //   let arr = [];
 //   for (let i=2; i<=n/2; i++){
-
-//   }
+//     if( Number.isInteger(n/i) ){
+//       arr = arr.push(primeFactors(i))
+//     }
+//     else arr = arr.push(i)
+//   } return arr;
 // }
+
+// console.log(primeFactors(200))
 
 
 
@@ -826,6 +831,19 @@ balancedBrackets( '[(])' ) // => false
 balancedBrackets( '[({}[])]' ) // => true
 -----------------------------------------------------------------*/
 // Your solution for 23-balancedBrackets here:
+function balancedBrackets(str){
+  if (str.length % 2 !== 0) return false;
+  let stack = [];
+  for (let i=0; i<str.length; i++){
+    let char = str[i];
+    if ('([{'.includes(char)){
+      stack.push(char);
+    } else if (!'()[]{}'.includes(stack.pop()+char)) return false;
+  }
+  return true;
+}
+
+
 
 
 
